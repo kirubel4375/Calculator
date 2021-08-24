@@ -1,6 +1,7 @@
 import 'package:calculator/Reusables/AlreadyhaveAccount.dart';
 import 'package:calculator/Reusables/Card_wraper.dart';
 import 'package:calculator/Reusables/Path_painter.dart';
+import 'package:calculator/Screens/CalculatorPage.dart';
 import 'package:calculator/Screens/RegisterPage.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                         //   if (user != null)
                         //     Navigator.pushNamed(context, MyHomePage.route);
                         // } catch (_) {}
+                        Navigator.pushNamed(context, CalculatorPage.route);
                       },
                       forgotPasswordPress: (){
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PasswordReset()));

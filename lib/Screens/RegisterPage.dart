@@ -1,10 +1,10 @@
 import 'package:calculator/Reusables/AlreadyhaveAccount.dart';
 import 'package:calculator/Reusables/Card_wraper.dart';
 import 'package:calculator/Reusables/Path_painter.dart';
+import 'package:calculator/Screens/CalcPage.dart';
 import 'package:calculator/Screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-
 
 class RegisterPage extends StatefulWidget {
   static final String route = '/sign_up_page';
@@ -52,6 +52,7 @@ late String password;
                           // } catch (_) {
 
                           // }
+                          Navigator.pushNamed(context, CalcApp.route);
                         },
                       confirmOnChanged: (value){},
                       confirmer: (String? value) {

@@ -10,8 +10,15 @@ class HistoryPage extends StatefulWidget {
 class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Histories"),
+        ),
+        body: ListView.builder(itemBuilder: (context, index){
+          return Container();
+        }),
+      ),
     );
   }
 }
