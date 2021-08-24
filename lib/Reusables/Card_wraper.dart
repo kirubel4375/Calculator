@@ -102,7 +102,7 @@ class CardWraperContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                SignLogForm(
+                if(isSignUp)SignLogForm(
                   obscure: false,
                   onchanged: emailOnchanged,
                   validator:
@@ -118,7 +118,7 @@ class CardWraperContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                SignLogForm(
+                if(isSignUp)SignLogForm(
                   obscure: false,
                   onchanged: emailOnchanged,
                   validator:

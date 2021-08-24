@@ -1,8 +1,10 @@
 import 'package:calculator/Reusables/CalcButton.dart';
 import 'package:calculator/Reusables/DrawerItems.dart';
+import 'package:calculator/Src/Functions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'package:provider/provider.dart';
 
 class CalcApp extends StatefulWidget {
   static final String route = "calc_app";
@@ -37,17 +39,23 @@ class CalcAppState extends State<CalcApp> {
     Parser p = Parser();
     Expression exp = p.parse(_expression);
     ContextModel cm = ContextModel();
-
     setState(() {
       _history = _expression;
+
       _expression = exp.evaluate(EvaluationType.REAL, cm).toString();
     });
+    Provider.of<SomeFunctions>(context, listen: false).addtoList("$_history " +"= " + _expression);
+
   }
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(title: Text(" "),
+      elevation:0,
+      backgroundColor: Color(0xFF283637),
+      ),
         backgroundColor: Color(0xFF283637),
         drawer: Material(
           child: Drawer(

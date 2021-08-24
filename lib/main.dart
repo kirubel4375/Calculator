@@ -5,8 +5,16 @@ import 'package:calculator/Screens/LoginPage.dart';
 import 'package:calculator/Screens/ProfilePage.dart';
 import 'package:calculator/Screens/RegisterPage.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'Src/Functions.dart';
+
 void main() {
-  return runApp(MyApp());
+  return runApp(MultiProvider(
+    providers: [
+    ChangeNotifierProvider<SomeFunctions>(create: (BuildContext context)=>SomeFunctions()),
+    ],
+    child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

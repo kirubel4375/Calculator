@@ -8,8 +8,8 @@ class DrawerItems extends StatelessWidget {
     return ListView(
       children: [
         UserAccountsDrawerHeader(
-          accountName: Container(),
-          accountEmail: Container(),
+          accountName: Text("username"),
+          accountEmail: Text("email@gmail.com"),
           currentAccountPicture: CircleAvatar(),
         ),
         ListTile(
