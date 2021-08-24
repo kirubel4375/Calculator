@@ -1,5 +1,4 @@
 import 'package:calculator/Screens/CalcPage.dart';
-import 'package:calculator/Screens/CalculatorPage.dart';
 import 'package:calculator/Screens/HistoryPage.dart';
 import 'package:calculator/Screens/LoginPage.dart';
 import 'package:calculator/Screens/ProfilePage.dart';
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
         LoginPage.route: (context)=>LoginPage(),
         RegisterPage.route: (context)=>RegisterPage(),
         ProfilePage.route: (context)=>ProfilePage(),
-        CalculatorPage.route: (context)=>CalculatorPage(),
         HistoryPage.route: (context)=>HistoryPage(),
         CalcApp.route: (context)=>CalcApp(),
       },
